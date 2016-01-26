@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ogT-0A-5vy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWx-6e-ebb">
+                                <rect key="frame" x="50" y="400" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" backgroundImage="yes_button.gif">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeDisplay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="heN-uy-VAb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="med-Og-RcN">
+                                <rect key="frame" x="200" y="400" width="100" height="30"/>
+                                <state key="normal" backgroundImage="no_button.gif">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeDisplay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ylt-sG-EtH"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Are you ready?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Smf-90-dr5">
+                                <rect key="frame" x="40" y="106" width="240" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Are you ready?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cjc-jF-Lg9">
+                                <rect key="frame" x="40" y="255" width="240" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GD-eo-8TA">
+                                <rect key="frame" x="5" y="401" width="145" height="30"/>
+                                <state key="normal" title="クイズを始める">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hog-FL-ZtG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="755-gm-wzJ">
+                                <rect key="frame" x="178" y="400" width="145" height="30"/>
+                                <state key="normal" title="クイズを終わる">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spo-Iu-71m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerTextView" destination="Cjc-jF-Lg9" id="nQu-4q-5r9"/>
+                        <outlet property="backgroundImageView" destination="ogT-0A-5vy" id="D4z-ic-8Dv"/>
+                        <outlet property="exitButton" destination="755-gm-wzJ" id="bDW-dd-Abm"/>
+                        <outlet property="noButton" destination="med-Og-RcN" id="v1b-bf-e19"/>
+                        <outlet property="questionTextView" destination="Smf-90-dr5" id="SEm-g4-fa3"/>
+                        <outlet property="startButton" destination="8GD-eo-8TA" id="Vaz-sH-oVZ"/>
+                        <outlet property="yesButton" destination="YWx-6e-ebb" id="9an-8Y-vQV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="269"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image1.png" width="320" height="568"/>
+        <image name="no_button.gif" width="100" height="30"/>
+        <image name="yes_button.gif" width="100" height="30"/>
+    </resources>
+</document>
